@@ -17,6 +17,7 @@
 		792F809E256662010079075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 792F809D256662010079075A /* Assets.xcassets */; };
 		792F80A1256662010079075A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792F809F256662010079075A /* LaunchScreen.storyboard */; };
 		792F80AA256663030079075A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792F80A9256663030079075A /* GoogleService-Info.plist */; };
+		79C181F42567D510002DE839 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C181F32567D510002DE839 /* UploadImageViewController.swift */; };
 		E5FBD619060C22556A9C1B06 /* Pods_FirebaseDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F993188B7EBD74E469F3D8 /* Pods_FirebaseDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		792F80A0256662010079075A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		792F80A2256662010079075A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		792F80A9256663030079075A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79C181F32567D510002DE839 /* UploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
 		9ACFB2C06755DA85F36D6392 /* Pods-FirebaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseDemo.release.xcconfig"; path = "Target Support Files/Pods-FirebaseDemo/Pods-FirebaseDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C3F993188B7EBD74E469F3D8 /* Pods_FirebaseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			children = (
 				792F8098256661FE0079075A /* AuthViewController.swift */,
 				7916F95D256674DF006C6721 /* HomeViewController.swift */,
+				79C181F32567D510002DE839 /* UploadImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C181F42567D510002DE839 /* UploadImageViewController.swift in Sources */,
 				7916F95E256674DF006C6721 /* HomeViewController.swift in Sources */,
 				7916F9672566B0F4006C6721 /* NoteModel.swift in Sources */,
 				7916F96225668360006C6721 /* ViewController+Extenstion.swift in Sources */,

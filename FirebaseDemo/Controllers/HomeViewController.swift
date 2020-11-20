@@ -76,6 +76,10 @@ class HomeViewController: UIViewController {
             print("error when signOut",error.localizedDescription)
         }
     }
+    //for go to Work with photos
+    @IBAction func goToPhotoPageOnClick(_ sender: UIBarButtonItem) {
+        self.goToWithNavigate(viewControllerName: "UploadImageViewController")
+    }
 }
 //TableView With DataSource
 extension HomeViewController: UITableViewDataSource{

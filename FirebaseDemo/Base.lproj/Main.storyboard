@@ -84,6 +84,60 @@
             </objects>
             <point key="canvasLocation" x="-197" y="42"/>
         </scene>
+        <!--Upload Image View Controller-->
+        <scene sceneID="yY2-8n-a8E">
+            <objects>
+                <viewController storyboardIdentifier="UploadImageViewController" id="6mi-ie-BMn" customClass="UploadImageViewController" customModule="FirebaseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uA1-Vt-J3x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EUh-Ur-KMJ">
+                                <rect key="frame" x="20" y="144" width="374" height="224"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-Tx-4Fy">
+                                <rect key="frame" x="60" y="468.5" width="294" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-sj-QcO">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <state key="normal" title="Upload Photo"/>
+                                        <connections>
+                                            <action selector="selectPhotoOnClick:" destination="6mi-ie-BMn" eventType="touchUpInside" id="36D-p2-THa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-j3-bHX">
+                                        <rect key="frame" x="0.0" y="77" width="294" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <state key="normal" title="Download Photo"/>
+                                        <connections>
+                                            <action selector="getPhotofromServerOnClick:" destination="6mi-ie-BMn" eventType="touchUpInside" id="XBp-U9-Htr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otd-po-L97"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t0i-Tx-4Fy" firstAttribute="centerY" secondItem="uA1-Vt-J3x" secondAttribute="centerY" constant="80" id="1wH-yL-Jho"/>
+                            <constraint firstItem="t0i-Tx-4Fy" firstAttribute="leading" secondItem="otd-po-L97" secondAttribute="leading" constant="60" id="2ec-fu-hEO"/>
+                            <constraint firstItem="t0i-Tx-4Fy" firstAttribute="centerX" secondItem="uA1-Vt-J3x" secondAttribute="centerX" id="JwD-kg-Qn0"/>
+                            <constraint firstItem="EUh-Ur-KMJ" firstAttribute="top" secondItem="otd-po-L97" secondAttribute="top" constant="100" id="Rkx-Gl-Q3H"/>
+                            <constraint firstItem="otd-po-L97" firstAttribute="trailing" secondItem="EUh-Ur-KMJ" secondAttribute="trailing" constant="20" id="SKe-X9-Nxc"/>
+                            <constraint firstItem="otd-po-L97" firstAttribute="trailing" secondItem="t0i-Tx-4Fy" secondAttribute="trailing" constant="60" id="b6W-g2-CrN"/>
+                            <constraint firstItem="EUh-Ur-KMJ" firstAttribute="leading" secondItem="otd-po-L97" secondAttribute="leading" constant="20" id="fAl-yu-kGI"/>
+                            <constraint firstItem="EUh-Ur-KMJ" firstAttribute="height" secondItem="uA1-Vt-J3x" secondAttribute="height" multiplier="0.25" id="hJf-eL-3tx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="EUh-Ur-KMJ" id="e7r-Mg-XNS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HjR-U2-nlt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563.768115942029" y="41.517857142857139"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="Csd-oX-P9h">
             <objects>
@@ -150,11 +204,18 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WSs-f8-fV2">
-                            <connections>
-                                <action selector="addDataOnClick:" destination="9vu-yo-37f" id="5YB-A3-ecu"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="WSs-f8-fV2">
+                                <connections>
+                                    <action selector="addDataOnClick:" destination="9vu-yo-37f" id="5YB-A3-ecu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="4m1-S0-jzJ">
+                                <connections>
+                                    <action selector="goToPhotoPageOnClick:" destination="9vu-yo-37f" id="Ghu-If-pTK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -186,6 +247,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -56,7 +56,6 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
                 let image = UIImage(data: data!)
                 self.imageView.image = image
             }
-        
         }
         //Way Two: Get Url
         storage.child("images").child(Auth.auth().currentUser!.uid).child("file.png").downloadURL { url, error in
